@@ -54,7 +54,7 @@ nexusStaging {
 modifyPom {
     project {
         name 'Spock Global Unroll Extension'
-        description 'Spock extension automatically enabling parametrized tests unrolling globally'
+        description 'Spock extension automatically enabling parametrized tests unrolling in the whole project'
         url 'https://github.com/szpak/spock-global-unroll'
         inceptionYear '2016'
 

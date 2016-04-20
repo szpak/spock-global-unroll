@@ -1,3 +1,8 @@
+/**
+ * Copyright (C) 2016 Marcin Zajączkowski.
+ *
+ * Licensed under the Apache License, Version 2.0.
+ */
 package info.solidsoft.spock.unroll
 
 import org.junit.runner.notification.RunListener
