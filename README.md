@@ -37,12 +37,12 @@ testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'  //required as spock-
 </dependency>
 ```
 
-**Please note** that to make it easier to use spock-global-unroll with different Spock versions (like 0.7-groovy-2.0 or 1.0-groovy-2.2)
-the plugin does not have compile dependency on Spock and a proper spock-core jar has to be explicitly defined in a build configuration. 
+**Please note** that to make it easier to use spock-global-unroll with different Spock versions (like 1.0-groovy-2.0 and 1.0-groovy-2.3)
+the plugin does not have compile dependency on Spock and a proper spock-core jar has to be explicitly defined in a build configuration.
 
 ## Spock compatibility
 
-spock-global-unroll should be compatible with Spock 0.7, 1.0 and possibly with its further versions.  
+spock-global-unroll should be compatible with Spock 1.0 and possibly with its further versions.
 
 ## Usage
 
