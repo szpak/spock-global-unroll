@@ -48,10 +48,10 @@ spock-global-unroll should be compatible with Spock 1.0 and possibly with its fu
 
 ### Basic usage
 
-spock-global-unroll is implemented as Spock global extension. It means that it enabled automatically when the spock-global-unroll jar is put on
+spock-global-unroll is implemented as a Spock global extension. It means that it is enabled automatically when the spock-global-unroll jar is put on
 a classpath. No further configuration is required.
 
-### Disable automatic unrolling for a class
+### Disabling automatic unrolling for a class
 
 Automatic unrolling can be disabled for a particular class by putting `@DisableGlobalUnroll` on it.
  
@@ -74,7 +74,7 @@ spock-global-unroll has been written by Marcin Zajączkowski. The author can be 
 There is also Marcin's blog available: [Solid Soft](http://blog.solidsoft.info/) - working code is not enough.
 
 Issues and features requests can be raised using the [issue tracker](https://github.com/szpak/spock-global-unroll/issues).
-Question can be asked using the Spock [mailing list/forum](https://groups.google.com/forum/#!forum/spockframework).
+Questions can be asked using the Spock [mailing list/forum](https://groups.google.com/forum/#!forum/spockframework).
 
 Please note that spock-global-unroll is a separate project and is NOT supported by The Spock Core Team.
 

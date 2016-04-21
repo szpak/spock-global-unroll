@@ -41,7 +41,6 @@ public class SpockGlobalUnrollExtension extends AbstractGlobalExtension {
 
     @Override
     public void visitSpec(SpecInfo spec) {
-        //TODO: Add property to disable it globally in configuration - if requested
         if (spec.getAnnotation(DisableGlobalUnroll.class) == null) {
             extension.visitSpecAnnotation(unroll, spec);
         }
