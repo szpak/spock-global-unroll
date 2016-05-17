@@ -53,7 +53,7 @@ a classpath. No further configuration is required.
 
 ### Disabling automatic unrolling for a class
 
-Automatic unrolling can be disabled for a particular class by putting `@DisableGlobalUnroll` on it.
+Automatic unrolling can be disabled for a particular class by putting `@Roll` (or `@DisableGlobalUnroll`) on it.
  
 Please note that the `@Unroll` annotations manually placed at the test (feature) level can be used to unroll particular tests anyway.
 

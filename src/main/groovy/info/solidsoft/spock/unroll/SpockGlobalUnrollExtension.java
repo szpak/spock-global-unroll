@@ -19,8 +19,9 @@ import spock.lang.Unroll;
  * To override default test name expanding (with #placeHolders in a test name) @{@link Unroll} annotation with
  * a custom text can used on top of a feature method or at the specification level.
  * <p>
- * To disable unrolling for a particular test class (specification) @{@link DisableGlobalUnroll} can be placed at the class level.
+ * To disable unrolling for a particular test class (specification) @{@link Roll} (or @{@link DisableGlobalUnroll}) can be placed at the class level.
  *
+ * @see Roll
  * @see DisableGlobalUnroll
  * @see Unroll
  *
@@ -41,8 +42,12 @@ public class SpockGlobalUnrollExtension extends AbstractGlobalExtension {
 
     @Override
     public void visitSpec(SpecInfo spec) {
-        if (spec.getAnnotation(DisableGlobalUnroll.class) == null) {
+        if (!isGlobalUnrollDisabledForSpec(spec)) {
             extension.visitSpecAnnotation(unroll, spec);
         }
+    }
+
+    private boolean isGlobalUnrollDisabledForSpec(SpecInfo spec) {
+        return spec.getAnnotation(DisableGlobalUnroll.class) != null || spec.getAnnotation(Roll.class) != null;
     }
 }

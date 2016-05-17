@@ -39,4 +39,18 @@ class ParametrizedSpec extends Specification {
             result.runCount == 1 + 2
     }
 
+    def "should not unroll parametrized test when @Roll is used"() {
+        given:
+            runner.addClassImport(Roll)
+        when:
+            Result result = runner.runWithImports """
+@Roll
+class ParametrizedSpec extends Specification {
+    $PARAMETRIZED_TEST
+}
+"""
+        then:
+            result.runCount == 1
+    }
+
 }

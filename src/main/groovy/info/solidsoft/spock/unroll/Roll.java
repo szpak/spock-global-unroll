@@ -13,7 +13,6 @@ import java.lang.annotation.Target;
 
 /**
  * Disables global parametrized tests unrolling provided by {@link SpockGlobalUnrollExtension} for a particular class.
- * An alias for @{@link Roll} annotation.
  * <p>
  * The annotation can be only put at the class (specification) level.
  * <p>
@@ -21,13 +20,14 @@ import java.lang.annotation.Target;
  * to unroll particular tests anyway.
  *
  * @author Marcin Zajączkowski
+ * @since 0.5.1
  *
  * @see SpockGlobalUnrollExtension
- * @see Roll
+ * @see DisableGlobalUnroll
  * @see spock.lang.Unroll Unroll
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
 @Documented
-public @interface DisableGlobalUnroll {
+public @interface Roll {
 }
