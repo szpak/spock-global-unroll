@@ -62,6 +62,27 @@ Please note that the `@Unroll` annotations manually placed at the test (feature)
 To override default test name expanding (with `#placeHolders` in a test name) `@Unroll` annotation with a custom text can used on top of
 a feature method or at the specification level.
 
+## Migration
+
+**Important!** Before any massive find & replace operation it is strongly recommended to commit all local changes to be able to easily restore the original state with `git reset --hard`.
+
+### Shell commands
+
+0. Run a complete build of the migrated project and write down a total number of tests (optional).
+1. Add `spock-global-unroll` dependency to a test scope (as described above).
+2. Execute the following (strange looking) command in the root of your project (or the root directory with tests):
+ 
+    ```
+    find . -type f -iname '*.groovy' -exec sed -ie ':a;N;$!ba;s/[\t ]\+\@Unroll[\r\n]\+//g' \{\} \;
+    ```
+
+3. Run a clean build of your project and verify that the number of tests is equal to (or greater then) measured before the migration.
+4. Commit and push changes.
+
+This command was tested on Linux with Fish and Bash.
+
+Plese note that I'm not a regex/sed expert, so feel free to create a PR with proposed enhancements.
+
 ## Rationale
 
 I've been always frustrated with the need to add `@Unroll` annotation for every parametrized test/feature (or at least at the class/specification
