@@ -16,7 +16,7 @@ spock-global-unroll jars are available in Maven Central.
 ### Gradle
 
 ```
-testCompile 'info.solidsoft.spock:spock-global-unroll:0.5.0'
+testCompile 'info.solidsoft.spock:spock-global-unroll:0.5.1'
 testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'  //required as spock-global-unroll assumes that spock-core is provided
 ```
 
