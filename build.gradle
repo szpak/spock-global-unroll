@@ -38,8 +38,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.spockframework:spock-core:1.0-groovy-2.4'
-    compileOnly 'org.codehaus.groovy:groovy-all:2.4.6'
+    compileOnly('org.spockframework:spock-core:1.0-groovy-2.4') {
+        exclude module: "groovy-all"
+    }
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
     testCompile 'org.codehaus.groovy:groovy-all:2.4.6'
