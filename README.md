@@ -73,7 +73,7 @@ a feature method or at the specification level.
 2. Execute the following (strange looking) commands in the root of your project (or the root directory with tests):
  
     ```
-    find . -type f -iname '*.groovy' -exec sed -i ':a;N;$!ba;s/[\t ]\+\@Unroll[\r\n]\+//g' \{\} \;
+    find . -type f -iname '*.groovy' -exec sed -i ':a;N;$!ba;s/[\t ]*\@Unroll[\r\n]\+//g' \{\} \;
     find . -type f -iname '*.groovy' -exec sed -i ':a;N;$!ba;s/import spock.lang.Unroll[\r\n]//g' \{\} \;
     ```
 
