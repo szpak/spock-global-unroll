@@ -26,7 +26,7 @@ testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'  //required as spock-
 <dependency>
     <groupId>info.solidsoft.spock</groupId>
     <artifactId>spock-global-unroll</artifactId>
-    <version>0.5.0</version>
+    <version>0.5.1</version>
     <scope>test</scope>
 </dependency>
 <dependency>
