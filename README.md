@@ -70,10 +70,11 @@ a feature method or at the specification level.
 
 0. Run a complete build of the migrated project and write down a total number of tests (optional).
 1. Add `spock-global-unroll` dependency to a test scope (as described above).
-2. Execute the following (strange looking) command in the root of your project (or the root directory with tests):
+2. Execute the following (strange looking) commands in the root of your project (or the root directory with tests):
  
     ```
-    find . -type f -iname '*.groovy' -exec sed -ie ':a;N;$!ba;s/[\t ]\+\@Unroll[\r\n]\+//g' \{\} \;
+    find . -type f -iname '*.groovy' -exec sed -i ':a;N;$!ba;s/[\t ]\+\@Unroll[\r\n]\+//g' \{\} \;
+    find . -type f -iname '*.groovy' -exec sed -i ':a;N;$!ba;s/import spock.lang.Unroll[\r\n]//g' \{\} \;
     ```
 
 3. Run a clean build of your project and verify that the number of tests is equal to (or greater then) measured before the migration.
