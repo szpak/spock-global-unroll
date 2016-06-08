@@ -23,8 +23,10 @@ scmVersion {
     releaseCommitMessage { version, position -> "Release version: ${version}\n\n[ci skip]" }
     ignoreUncommittedChanges = false
     hooks {
-        pre 'fileUpdate', [file: 'README.md', pattern: {v, p -> /'info\.solidsoft\.spock:spock-global-unroll:.*'/},
-                           replacement: {v, p -> "\'info.solidsoft.spock:spock-global-unroll:$v\'"}]
+        pre 'fileUpdate', [file: 'README.md', pattern: {v, c -> /'info\.solidsoft\.spock:spock-global-unroll:$v'/},
+                           replacement: {v, c -> "'info.solidsoft.spock:spock-global-unroll:$v'"}]
+        pre 'fileUpdate', [file: 'README.md', pattern: {v, c -> /<version>$v<\/version>$/},
+                           replacement: {v, c -> "<version>$v</version>"}]
     }
 }
 
