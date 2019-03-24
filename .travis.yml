@@ -1,7 +1,8 @@
 language: java
 jdk:
   - oraclejdk8
-  - oraclejdk9
+  - openjdk11
+  - openjdk12
 
 install: ./gradlew assemble --stacktrace --info
 script: ./gradlew check --stacktrace --info --continue

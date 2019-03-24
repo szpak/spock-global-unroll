@@ -33,20 +33,20 @@ scmVersion {
 project.group = "info.solidsoft.spock"
 project.version = scmVersion.version
 
-sourceCompatibility = 1.6
+sourceCompatibility = 1.7
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compileOnly('org.spockframework:spock-core:1.1-groovy-2.4') {
+    compileOnly('org.spockframework:spock-core:1.3-groovy-2.4') {
         exclude module: "groovy-all"
     }
 
-    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
-    testCompile 'org.codehaus.groovy:groovy-all:2.4.11'
-    testCompile 'net.bytebuddy:byte-buddy:1.6.14' //for Mocking classes and spying in Spock
+    testCompile 'org.spockframework:spock-core:1.3-groovy-2.4'
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.16'
+    testCompile 'net.bytebuddy:byte-buddy:1.9.11' //for Mocking classes and spying in Spock
 }
 
 nexusStaging {
