@@ -42,7 +42,12 @@ the plugin does not have compile dependency on Spock and a proper spock-core jar
 
 ## Spock compatibility
 
-spock-global-unroll should be compatible with Spock 1.0, 1.1 and possibly with its further versions.
+spock-global-unroll should be compatible with Spock 1.0 to 1.3.
+
+Spock 2.0(-M3) [unrolls](https://github.com/spockframework/spock/issues/967) parameterized tests (features) by default and the plugin is no longer needed.
+
+**Bear in mind** that due to the backward [incompatible](https://github.com/szpak/spock-global-unroll/issues/7) changes in Spock 2.0-M3+, the plugin has to be
+explicitly removed from the classpath to avoid runtime errors. 
 
 ## Usage
 
